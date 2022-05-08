@@ -30,28 +30,28 @@ namespace MyGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.score = new System.Windows.Forms.Label();
+            this.textScore = new System.Windows.Forms.Label();
             this.land = new System.Windows.Forms.PictureBox();
-            this.BottomObstacle = new System.Windows.Forms.PictureBox();
-            this.TopObstacle = new System.Windows.Forms.PictureBox();
-            this.Mybird = new System.Windows.Forms.PictureBox();
+            this.bottomObstacle = new System.Windows.Forms.PictureBox();
+            this.topObstacle = new System.Windows.Forms.PictureBox();
+            this.mybird = new System.Windows.Forms.PictureBox();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.land)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BottomObstacle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TopObstacle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Mybird)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomObstacle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topObstacle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mybird)).BeginInit();
             this.SuspendLayout();
             // 
-            // score
+            // textScore
             // 
-            this.score.AutoSize = true;
-            this.score.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score.Location = new System.Drawing.Point(12, 18);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(138, 43);
-            this.score.TabIndex = 4;
-            this.score.Text = "Счёт:0\r\n";
-            this.score.Click += new System.EventHandler(this.label1_Click);
+            this.textScore.AutoSize = true;
+            this.textScore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textScore.Location = new System.Drawing.Point(12, 18);
+            this.textScore.Name = "textScore";
+            this.textScore.Size = new System.Drawing.Size(138, 43);
+            this.textScore.TabIndex = 4;
+            this.textScore.Text = "Счёт:0\r\n";
+            this.textScore.Click += new System.EventHandler(this.Label1_Click);
             // 
             // land
             // 
@@ -62,44 +62,45 @@ namespace MyGame
             this.land.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.land.TabIndex = 3;
             this.land.TabStop = false;
-            this.land.Click += new System.EventHandler(this.land_Click);
+            this.land.Click += new System.EventHandler(this.Land_Click);
             // 
-            // BottomObstacle
+            // bottomObstacle
             // 
-            this.BottomObstacle.Image = global::MyGame.Properties.Resources.pipe;
-            this.BottomObstacle.Location = new System.Drawing.Point(586, 483);
-            this.BottomObstacle.Name = "BottomObstacle";
-            this.BottomObstacle.Size = new System.Drawing.Size(133, 308);
-            this.BottomObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BottomObstacle.TabIndex = 2;
-            this.BottomObstacle.TabStop = false;
+            this.bottomObstacle.Image = global::MyGame.Properties.Resources.pipe;
+            this.bottomObstacle.Location = new System.Drawing.Point(649, 483);
+            this.bottomObstacle.Name = "bottomObstacle";
+            this.bottomObstacle.Size = new System.Drawing.Size(133, 308);
+            this.bottomObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bottomObstacle.TabIndex = 2;
+            this.bottomObstacle.TabStop = false;
             // 
-            // TopObstacle
+            // topObstacle
             // 
-            this.TopObstacle.Image = global::MyGame.Properties.Resources.pipedown;
-            this.TopObstacle.Location = new System.Drawing.Point(393, 0);
-            this.TopObstacle.Name = "TopObstacle";
-            this.TopObstacle.Size = new System.Drawing.Size(127, 313);
-            this.TopObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TopObstacle.TabIndex = 1;
-            this.TopObstacle.TabStop = false;
-            this.TopObstacle.Click += new System.EventHandler(this.TopObstacle_Click);
+            this.topObstacle.Image = global::MyGame.Properties.Resources.pipedown;
+            this.topObstacle.Location = new System.Drawing.Point(393, 0);
+            this.topObstacle.Name = "topObstacle";
+            this.topObstacle.Size = new System.Drawing.Size(127, 313);
+            this.topObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.topObstacle.TabIndex = 1;
+            this.topObstacle.TabStop = false;
+            this.topObstacle.Click += new System.EventHandler(this.TopObstacle_Click);
             // 
-            // Mybird
+            // mybird
             // 
-            this.Mybird.Image = global::MyGame.Properties.Resources.bird;
-            this.Mybird.Location = new System.Drawing.Point(40, 381);
-            this.Mybird.Name = "Mybird";
-            this.Mybird.Size = new System.Drawing.Size(88, 72);
-            this.Mybird.TabIndex = 0;
-            this.Mybird.TabStop = false;
-            this.Mybird.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.mybird.Image = global::MyGame.Properties.Resources.bird;
+            this.mybird.Location = new System.Drawing.Point(45, 367);
+            this.mybird.Name = "mybird";
+            this.mybird.Size = new System.Drawing.Size(76, 72);
+            this.mybird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.mybird.TabIndex = 0;
+            this.mybird.TabStop = false;
+            this.mybird.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // timerGame
             // 
             this.timerGame.Enabled = true;
             this.timerGame.Interval = 20;
-            this.timerGame.Tick += new System.EventHandler(this.timerGameEvent);
+            this.timerGame.Tick += new System.EventHandler(this.TimerGameEvent);
             // 
             // Form1
             // 
@@ -107,20 +108,20 @@ namespace MyGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(826, 849);
-            this.Controls.Add(this.score);
+            this.Controls.Add(this.textScore);
+            this.Controls.Add(this.mybird);
             this.Controls.Add(this.land);
-            this.Controls.Add(this.BottomObstacle);
-            this.Controls.Add(this.TopObstacle);
-            this.Controls.Add(this.Mybird);
+            this.Controls.Add(this.bottomObstacle);
+            this.Controls.Add(this.topObstacle);
             this.Name = "Form1";
             this.Text = "MyGame";
             this.TransparencyKey = System.Drawing.Color.Transparent;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keysGameDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keysGameUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeysGameDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeysGameUp);
             ((System.ComponentModel.ISupportInitialize)(this.land)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BottomObstacle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TopObstacle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Mybird)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomObstacle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topObstacle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mybird)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,11 +129,11 @@ namespace MyGame
 
         #endregion
 
-        private System.Windows.Forms.PictureBox Mybird;
-        private System.Windows.Forms.PictureBox TopObstacle;
-        private System.Windows.Forms.PictureBox BottomObstacle;
+        private System.Windows.Forms.PictureBox mybird;
+        private System.Windows.Forms.PictureBox topObstacle;
+        private System.Windows.Forms.PictureBox bottomObstacle;
         private System.Windows.Forms.PictureBox land;
-        private System.Windows.Forms.Label score;
+        private System.Windows.Forms.Label textScore;
         private System.Windows.Forms.Timer timerGame;
     }
 }
